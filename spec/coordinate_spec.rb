@@ -7,26 +7,26 @@ describe Rover::Coordinate do
       expect(coordinate.x).to be == 1
     end
 
-    xit "has an y coordinate" do
+    it "has an y coordinate" do
       coordinate = Rover::Coordinate.new(1, 3)
       expect(coordinate.y).to be == 3
     end
   end
 
-  xdescribe '#valid?' do
+  describe '#valid?' do
     it "is true when the x and y are greater than or equal to 0" do
-      coordiate = Rover::Coordinate.new(1, 1)
+      coordinate = Rover::Coordinate.new(1, 1)
       expect(coordinate.valid?).to be == true
     end
 
     it "is false when the x coordinate is less than 0" do
-      coordiate = Rover::Coordinate.new(-1, 1)
-      expect(coordiate.valid?).to be == true
+      coordinate = Rover::Coordinate.new(-1, 1)
+      expect(coordinate.valid?).to be == false
     end
 
     it "is false when the y coordinate is less than 0" do
-      coordiate = Rover::Coordinate.new(1, -1)
-      expect(coordiate.valid?).to be == true
+      coordinate = Rover::Coordinate.new(1, -1)
+      expect(coordinate.valid?).to be == false
     end
   end
 
