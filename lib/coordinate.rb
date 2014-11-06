@@ -31,5 +31,8 @@ module Rover
       Coordinate.new(x, y + 1)
     end
 
+    def == other_coordinate
+      @x == other_coordinate.x && @y == other_coordinate.y
+    end
   end
 end

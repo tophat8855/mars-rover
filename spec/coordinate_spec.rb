@@ -60,5 +60,33 @@ describe Rover::Coordinate do
 
   describe '#==' do
     # look at tests for Card and try to reproduce == tests
+    it 'returns true when two coordinates have the same x and y values' do
+      coordinate_a = Rover::Coordinate.new(2, 3)
+      coordinate_b = Rover::Coordinate.new(2, 3)
+
+      expect(coordinate_a == coordinate_b).to be true
+    end
+
+    it 'returns false when two coordinates have different x values and different y values' do
+      coordinate_a = Rover::Coordinate.new(2, 3)
+      coordinate_b = Rover::Coordinate.new(5, 4)
+
+      expect(coordinate_a == coordinate_b).to be false
+    end
+
+    it 'returns false when two coordinates have the same x values and different y values' do
+      coordinate_a = Rover::Coordinate.new(2, 3)
+      coordinate_b = Rover::Coordinate.new(2, 4)
+
+      expect(coordinate_a == coordinate_b).to be false
+    end
+
+    it 'returns false when two coordinates have different x values and the same y values' do
+      coordinate_a = Rover::Coordinate.new(2, 3)
+      coordinate_b = Rover::Coordinate.new(5, 3)
+
+      expect(coordinate_a == coordinate_b).to be false
+    end
+
   end
 end
