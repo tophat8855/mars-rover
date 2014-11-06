@@ -1,9 +1,7 @@
 require 'spec_helper'
 
 describe Rover::Plateau do
-  before do
-    pending('do the Coordinate first')
-  end
+
 
   describe 'on initialize' do
     # it builds a grid of 10 x 10 coordinates
@@ -23,14 +21,14 @@ describe Rover::Plateau do
     # this requires writing the method #include? for our plateau
     it "includes a coordinate for the origin" do
       plateau = Rover::Plateau.new
-      origin = Coordinate.new(0,0)
+      origin = Rover::Coordinate.new(0,0)
 
       expect( plateau.include?(origin) ).to be == true
     end
 
     it "includes a coordinate for last grid location" do
       plateau = Rover::Plateau.new
-      last_position = Coordinate.new(9,9)
+      last_position = Rover::Coordinate.new(9,9)
 
       expect( plateau.include?(last_position) ).to be == true
     end
@@ -44,7 +42,7 @@ describe Rover::Plateau do
       expect(plateau.valid_coordinate?(coordinate)).to be == false
     end
 
-    it "will be false if the coordinate is not included in coordinates" do
+    xit "will be false if the coordinate is not included in coordinates" do
       plateau = Rover::Plateau.new
       coordinate = Rover::Coordinate.new(22,50)
 
