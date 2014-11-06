@@ -15,5 +15,21 @@ module Rover
       end
     end
 
+    def east
+      Coordinate.new(x + 1, y)
+    end
+
+    def west
+      Coordinate.new(x - 1, y)
+    end
+
+    def north
+      Coordinate.new(x, y - 1)
+    end
+
+    def south
+      Coordinate.new(x, y + 1)
+    end
+
   end
 end

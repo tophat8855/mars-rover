@@ -30,32 +30,32 @@ describe Rover::Coordinate do
     end
   end
 
-  xit "#east will return a new coordinate with the same y, but an x that is one greater" do
+  it "#east will return a new coordinate with the same y, but an x that is one greater" do
     coordinate = Rover::Coordinate.new(3,3)
     eastern_coordinate = coordinate.east
     expect(eastern_coordinate.x).to be == 4
     expect(eastern_coordinate.y).to be == 3
   end
 
-  xit "#west will return a new coordinate with the same y, but an x that is one less" do
+  it "#west will return a new coordinate with the same y, but an x that is one less" do
     coordinate = Rover::Coordinate.new(3,3)
-    eastern_coordinate = coordinate.west
-    expect(eastern_coordinate.x).to be == 2
-    expect(eastern_coordinate.y).to be == 3
+    western_coordinate = coordinate.west
+    expect(western_coordinate.x).to be == 2
+    expect(western_coordinate.y).to be == 3
   end
 
-  xit "#north will return a new coordinate with one less in the y direction, but an x is same" do
+  it "#north will return a new coordinate with one less in the y direction, but an x is same" do
     coordinate = Rover::Coordinate.new(3,3)
-    eastern_coordinate = coordinate.west
-    expect(eastern_coordinate.x).to be == 3
-    expect(eastern_coordinate.y).to be == 2
+    northern_coordinate = coordinate.north
+    expect(northern_coordinate.x).to be == 3
+    expect(northern_coordinate.y).to be == 2
   end
 
-  xit "#north will return a new coordinate with one greater in the y direction, but an x is same" do
+  it "#south will return a new coordinate with one greater in the y direction, but an x is same" do
     coordinate = Rover::Coordinate.new(3,3)
-    eastern_coordinate = coordinate.west
-    expect(eastern_coordinate.x).to be == 3
-    expect(eastern_coordinate.y).to be == 4
+    southern_coordinate = coordinate.south
+    expect(southern_coordinate.x).to be == 3
+    expect(southern_coordinate.y).to be == 4
   end
 
   describe '#==' do
