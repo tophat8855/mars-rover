@@ -1,9 +1,6 @@
 require 'spec_helper'
 
 describe Rover::Cart do
-  before do
-    pending('do the coordinate and plateau before doing this one')
-  end
 
   describe 'on initialize' do
     # stretch: how could you move some of this code into a shared test setup
@@ -26,7 +23,7 @@ describe Rover::Cart do
 
       cart = Rover::Cart.new(coordinate, direction, plateau)
 
-      expect(cart.direction).to.be == :north
+      expect(cart.direction).to be == :north
     end
   end
 
@@ -42,7 +39,7 @@ describe Rover::Cart do
       expect(card.direction).to be == :east
     end
 
-    it "will change the direction from :east to :south when provided 'R'" do
+    xit "will change the direction from :east to :south when provided 'R'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :east
       plateau = Rover::Plateau.new
@@ -53,7 +50,7 @@ describe Rover::Cart do
       expect(card.direction).to be == :south
     end
 
-    it "will change the direction from :south to :west when provided 'R'" do
+    xit "will change the direction from :south to :west when provided 'R'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :south
       plateau = Rover::Plateau.new
@@ -64,7 +61,7 @@ describe Rover::Cart do
       expect(card.direction).to be == :west
     end
 
-    it "will change the direction from :west to :north when provided 'R'" do
+    xit "will change the direction from :west to :north when provided 'R'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :west
       plateau = Rover::Plateau.new
@@ -75,7 +72,7 @@ describe Rover::Cart do
       expect(card.direction).to be == :north
     end
 
-    it "will change the direction from :north to :west when provided 'L'" do
+    xit "will change the direction from :north to :west when provided 'L'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :north
       plateau = Rover::Plateau.new
@@ -86,7 +83,7 @@ describe Rover::Cart do
       expect(card.direction).to be == :west
     end
 
-    it "will change the direction from :west to :south when provided 'L'" do
+    xit "will change the direction from :west to :south when provided 'L'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :west
       plateau = Rover::Plateau.new
@@ -97,7 +94,7 @@ describe Rover::Cart do
       expect(card.direction).to be == :south
     end
 
-    it "will change the direction from :south to :east when provided 'L'" do
+    xit "will change the direction from :south to :east when provided 'L'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :south
       plateau = Rover::Plateau.new
@@ -108,7 +105,7 @@ describe Rover::Cart do
       expect(card.direction).to be == :east
     end
 
-    it "will change the direction from :east to :north when provided 'L'" do
+    xit "will change the direction from :east to :north when provided 'L'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :east
       plateau = Rover::Plateau.new
@@ -120,7 +117,7 @@ describe Rover::Cart do
     end
   end
 
-  describe '#move' do
+  xdescribe '#move' do
     it "will have the coordinate of the eastern next coordinate when pointing east" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :east
@@ -190,7 +187,7 @@ describe Rover::Cart do
     end
   end
 
-  describe "#run_command" do
+  xdescribe "#run_command" do
     it "will move when provided 'M'" do
       coordinate = Rover::Coordinate.new(5,5)
       direction = :north

@@ -42,7 +42,7 @@ describe Rover::Plateau do
       expect(plateau.valid_coordinate?(coordinate)).to be == false
     end
 
-    xit "will be false if the coordinate is not included in coordinates" do
+    it "will be false if the coordinate is not included in coordinates" do
       plateau = Rover::Plateau.new
       coordinate = Rover::Coordinate.new(22,50)
 
