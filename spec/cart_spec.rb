@@ -36,10 +36,10 @@ describe Rover::Cart do
       cart = Rover::Cart.new(coordinate, direction, plateau)
       cart.rotate('R')
 
-      expect(card.direction).to be == :east
+      expect(cart.direction).to be == :east
     end
 
-    xit "will change the direction from :east to :south when provided 'R'" do
+    it "will change the direction from :east to :south when provided 'R'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :east
       plateau = Rover::Plateau.new
@@ -47,10 +47,10 @@ describe Rover::Cart do
       cart = Rover::Cart.new(coordinate, direction, plateau)
       cart.rotate('R')
 
-      expect(card.direction).to be == :south
+      expect(cart.direction).to be == :south
     end
 
-    xit "will change the direction from :south to :west when provided 'R'" do
+    it "will change the direction from :south to :west when provided 'R'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :south
       plateau = Rover::Plateau.new
@@ -58,10 +58,10 @@ describe Rover::Cart do
       cart = Rover::Cart.new(coordinate, direction, plateau)
       cart.rotate('R')
 
-      expect(card.direction).to be == :west
+      expect(cart.direction).to be == :west
     end
 
-    xit "will change the direction from :west to :north when provided 'R'" do
+    it "will change the direction from :west to :north when provided 'R'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :west
       plateau = Rover::Plateau.new
@@ -69,10 +69,10 @@ describe Rover::Cart do
       cart = Rover::Cart.new(coordinate, direction, plateau)
       cart.rotate('R')
 
-      expect(card.direction).to be == :north
+      expect(cart.direction).to be == :north
     end
 
-    xit "will change the direction from :north to :west when provided 'L'" do
+    it "will change the direction from :north to :west when provided 'L'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :north
       plateau = Rover::Plateau.new
@@ -80,10 +80,10 @@ describe Rover::Cart do
       cart = Rover::Cart.new(coordinate, direction, plateau)
       cart.rotate('L')
 
-      expect(card.direction).to be == :west
+      expect(cart.direction).to be == :west
     end
 
-    xit "will change the direction from :west to :south when provided 'L'" do
+    it "will change the direction from :west to :south when provided 'L'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :west
       plateau = Rover::Plateau.new
@@ -91,10 +91,10 @@ describe Rover::Cart do
       cart = Rover::Cart.new(coordinate, direction, plateau)
       cart.rotate('L')
 
-      expect(card.direction).to be == :south
+      expect(cart.direction).to be == :south
     end
 
-    xit "will change the direction from :south to :east when provided 'L'" do
+    it "will change the direction from :south to :east when provided 'L'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :south
       plateau = Rover::Plateau.new
@@ -102,10 +102,10 @@ describe Rover::Cart do
       cart = Rover::Cart.new(coordinate, direction, plateau)
       cart.rotate('L')
 
-      expect(card.direction).to be == :east
+      expect(cart.direction).to be == :east
     end
 
-    xit "will change the direction from :east to :north when provided 'L'" do
+    it "will change the direction from :east to :north when provided 'L'" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :east
       plateau = Rover::Plateau.new
@@ -113,7 +113,7 @@ describe Rover::Cart do
       cart = Rover::Cart.new(coordinate, direction, plateau)
       cart.rotate('L')
 
-      expect(card.direction).to be == :north
+      expect(cart.direction).to be == :north
     end
   end
 
