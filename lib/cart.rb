@@ -38,6 +38,16 @@ module Rover
       else
         false
       end
+    end
+
+    def run_command(command)
+      if command == "M"
+        self.move
+      elsif command == "L"
+        self.rotate(command)
+      elsif command == "R"
+        self.rotate(command)
+      end
 
     end
 

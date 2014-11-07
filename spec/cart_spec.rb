@@ -187,7 +187,7 @@ describe Rover::Cart do
     end
   end
 
-  xdescribe "#run_command" do
+  describe "#run_command" do
     it "will move when provided 'M'" do
       coordinate = Rover::Coordinate.new(5,5)
       direction = :north
