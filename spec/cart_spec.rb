@@ -117,7 +117,7 @@ describe Rover::Cart do
     end
   end
 
-  xdescribe '#move' do
+  describe '#move' do
     it "will have the coordinate of the eastern next coordinate when pointing east" do
       coordinate = Rover::Coordinate.new(1,2)
       direction = :east
@@ -174,7 +174,7 @@ describe Rover::Cart do
       cart = Rover::Cart.new(coordinate, direction, plateau)
 
       cart.move
-      expect(cart.coordinate).to be == Coordinate.new(0, 0)
+      expect(cart.coordinate).to be == Rover::Coordinate.new(0, 0)
     end
 
     it "returns false if the next coordinate is not valid according to the plateau" do

@@ -17,10 +17,29 @@ module Rover
       elsif spin == "L"
         @direction = compass_rose.rotate(-1)[location]
       end
-
-      p @direction
     end
-    
+
+    def move
+      case direction
+
+      when :east
+        new_coord = @coordinate.east
+      when :north
+        new_coord = @coordinate.north
+      when :south
+        new_coord = @coordinate.south
+      when :west
+        new_coord = @coordinate.west
+      end
+
+      if new_coord.valid?
+        @coordinate = new_coord
+        true
+      else
+        false
+      end
+
+    end
 
   end
 end
